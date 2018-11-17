@@ -1,3 +1,4 @@
+
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: @user %>
 
@@ -13,6 +14,26 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+  <label  for="street">Street:(optional)</label>
+  <input type="text" class="form-control" id="street" placeholder="Enter Street" name="street">
+
+<label  for="city">City:(optional)</label>
+  <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
+
+<label  for="street">State:(optional)</label>
+  <input type="text" class="form-control" id="state" placeholder="Enter State" name="state">
+
+<label  for="street">Zip Code:(optional)</label>
+  <input type="text" class="form-control" id="zip" placeholder="Enter Zipcode" name="zip">
+
+  <label  for="mobno">Mobile Number:(optional)</label>
+  <input type="text" class="form-control" id="mobno" placeholder="Enter Mobile Number" name="mobno">
+
+
+  <%= f.label :subscribe, class: "checkbox inline" do %>
+    <%= f.check_box :subscribe_promotion %>
+    <h4>Register for promotions: </h4>
+  <% end %>
+
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
-

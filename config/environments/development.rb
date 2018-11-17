@@ -32,11 +32,21 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
+  #config.action_mailer.delivery_method = :test
 
   host = 'localhost:3000'                     # Local server
 config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'premium55.web-hosting.com',
+  port:                  '465',
+  domain:               'premium55.web-hosting.com',
+  user_name:            'test@dbms.akshaykokane.com',
+  password:             'akshaykokane',
+  authentication:       :plain,
+  tls: true,
+  enable_starttls_auto: true }
 
 
   config.action_mailer.perform_caching = false

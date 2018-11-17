@@ -9,6 +9,8 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+background-image: url(/assets/7.jpeg);
+
 }
 
 section {
@@ -106,13 +108,7 @@ footer {
 
 /* miscellaneous */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
+
 
 /* forms */
 
@@ -155,6 +151,7 @@ input {
   width: auto;
   margin-left: 0;
 }
+
 
 /* Users index */
 

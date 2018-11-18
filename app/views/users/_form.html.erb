@@ -2,8 +2,12 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: @user %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :firstname, class: 'form-control' %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :lastname, class: 'form-control' %>
 
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control' %>
@@ -14,20 +18,33 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-  <label  for="street">Street:(optional)</label>
-  <input type="text" class="form-control" id="street" placeholder="Enter Street" name="street">
+   <%= f.label :street, 'Street (Optional)' %>
+   <%= f.text_field :street, class: 'form-control' %>
 
-<label  for="city">City:(optional)</label>
-  <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
+   <%= f.label :city, 'City (Optional)' %>
+   <%= f.text_field :city, class: 'form-control' %>
 
-<label  for="street">State:(optional)</label>
-  <input type="text" class="form-control" id="state" placeholder="Enter State" name="state">
+   <%= f.label :state, 'State (Optional)' %>
+   <%= f.text_field :state, class: 'form-control' %>
 
-<label  for="street">Zip Code:(optional)</label>
-  <input type="text" class="form-control" id="zip" placeholder="Enter Zipcode" name="zip">
+   <%= f.label :zipcode, 'Zip Code (Optional)' %>
+   <%= f.text_field :zipcode, class: 'form-control' %>
 
-  <label  for="mobno">Mobile Number:(optional)</label>
-  <input type="text" class="form-control" id="mobno" placeholder="Enter Mobile Number" name="mobno">
+   <%= f.label :mobileno, 'Mobile Number (Optional)' %>
+   <%= f.text_field :mobileno, class: 'form-control' %>
+
+   <%= f.label :cardtype, 'Card Type (Optional)' %>
+   <%= f.text_field :cardtype, class: 'form-control' %>
+  
+   <%= f.label :cardnumber, 'Card Number (Optional)' %>
+   <%= f.text_field :cardnumber, class: 'form-control' %>
+
+   <%= f.label :cardexpiry, 'Card Expiry Date (Optional)' %>
+   <%= f.text_field :cardexpiry, class: 'form-control' %>
+
+   <%= f.label :cardzip, 'Card Zip (Optional)' %>
+   <%= f.text_field :cardzip, class: 'form-control' %>
+
 
 
   <%= f.label :subscribe, class: "checkbox inline" do %>

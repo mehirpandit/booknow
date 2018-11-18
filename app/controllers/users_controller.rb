@@ -54,8 +54,9 @@ def create
  private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.require(:user).permit(:firstname, :lastname, :email, :password, :password_confirmation,
+       :street, :city, :state, :zipcode, :mobileno, :cardtype, :cardnumber, :cardexpiry,
+        :cardzip, :subscribe_promotion)
     end
 
     # Before filters
@@ -74,6 +75,7 @@ def create
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
+    
  # Confirms an admin user.
     def admin_user
       redirect_to(root_url) unless current_user.admin?

@@ -1,0 +1,22 @@
+<% provide(:title, 'All Movies') %>
+<h1>All movies</h1>
+
+<%= will_paginate %>
+
+
+<ul class="movies">
+  <% @movies.each do |movie| %>
+    <li>
+      
+      <%= link_to movie.name, movie %>
+  
+
+    | <%= link_to "delete", movie, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+ 
+
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

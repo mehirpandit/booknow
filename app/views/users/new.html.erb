@@ -3,6 +3,62 @@
 <h1>Sign up</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= render 'form' %>
+    
+<%= form_for(@user, url: signup_path) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+
+  <%= f.label :first_name %>
+  <%= f.text_field :firstname, class: 'form-control' %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :lastname, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+   <%= f.label :street, 'Street (Optional)' %>
+   <%= f.text_field :street, class: 'form-control' %>
+
+   <%= f.label :city, 'City (Optional)' %>
+   <%= f.text_field :city, class: 'form-control' %>
+
+   <%= f.label :state, 'State (Optional)' %>
+   <%= f.text_field :state, class: 'form-control' %>
+
+   <%= f.label :zipcode, 'Zip Code (Optional)' %>
+   <%= f.text_field :zipcode, class: 'form-control' %>
+
+   <%= f.label :mobileno, 'Mobile Number (Optional)' %>
+   <%= f.text_field :mobileno, class: 'form-control' %>
+
+   <%= f.label :cardtype, 'Card Type (Optional)' %>
+   <%= f.text_field :cardtype, class: 'form-control' %>
+  
+   <%= f.label :cardnumber, 'Card Number (Optional)' %>
+   <%= f.text_field :cardnumber, class: 'form-control' %>
+
+   <%= f.label :cardexpiry, 'Card Expiry Date (Optional)' %>
+   <%= f.text_field :cardexpiry, class: 'form-control' %>
+
+   <%= f.label :cardzip, 'Card Zip (Optional)' %>
+   <%= f.text_field :cardzip, class: 'form-control' %>
+
+
+
+  <%= f.label :subscribe, class: "checkbox inline" do %>
+    <%= f.check_box :subscribe_promotion %>
+    <h4>Register for promotions: </h4>
+  <% end %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
+
   </div>
 </div>

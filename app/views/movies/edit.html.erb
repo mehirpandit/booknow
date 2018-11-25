@@ -1,0 +1,21 @@
+<% provide(:title, 'Edit Movie') %>
+<% provide(:button_text, 'Save changes') %>
+<h1>Update Movie</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for(:movie, url: editmovie_path )  do |f| %>
+          <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :category %>
+      <%= f.text_field :category, class: 'form-control' %>
+
+      <%= f.submit "Update", class: "btn btn-primary" %>
+
+
+    <% end %>      
+  </div>
+</div>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  exp_date: 2018-11-24 19:56:52
+
+two:
+  code: MyString
+  exp_date: 2018-11-24 19:56:52

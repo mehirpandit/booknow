@@ -1,0 +1,22 @@
+<% provide(:title, 'All Halls') %>
+<h1>All Halls Info.</h1>
+
+<%= will_paginate %>
+
+<ul class="halls">
+  <% @halls.each do |hall| %>
+    <li>
+ 
+      <%= link_to hall.hall_name, hall %>
+      <%= link_to hall.no_of_seats, hall %>
+
+      
+    | <%= link_to "delete", hall, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  
+
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

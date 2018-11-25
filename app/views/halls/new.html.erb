@@ -1,0 +1,18 @@
+<% provide(:title, 'Create Hall') %>
+<h1>Add new Hall</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@hall) do |f| %>
+    
+      <%= f.label :name %>
+      <%= f.text_field :hall_name %>
+
+      <%= f.label :number_of_seat %>
+      <%= f.number_field(:no_of_seats, min: 1, max: 400, step: 1) %>
+
+
+      <%= f.submit "Create Hall", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

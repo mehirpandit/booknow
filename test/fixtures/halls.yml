@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hall_name: MyString
+  no_of_seats: 1
+
+two:
+  hall_name: MyString
+  no_of_seats: 1

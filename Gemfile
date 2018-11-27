@@ -31,6 +31,10 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'carrierwave', '~> 1.0'
+
+gem 'mini_magick', '~> 4.3'
+
 
 
 

@@ -1,0 +1,2 @@
+class Seating < ApplicationRecord
+end

@@ -1,0 +1,12 @@
+<% provide(:title, 'All bookings') %>
+<h1>All bookings</h1>
+
+<ul class="users">
+  <% @bookings.each do |booking| %>
+    <li>
+      
+      <%= link_to booking.tickets, booking %>
+      
+    </li>
+  <% end %>
+</ul>

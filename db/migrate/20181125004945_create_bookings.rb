@@ -3,7 +3,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
     create_table :bookings do |t|
       t.integer :tickets
       t.float :price
-
+       
       t.timestamps
     end
   end

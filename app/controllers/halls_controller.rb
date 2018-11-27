@@ -1,4 +1,6 @@
 class HallsController < ApplicationController
+
+  before_action :admin_user,     only: :destroy
   
   def index
   	@halls = Hall.paginate(page: params[:page])

@@ -1,2 +1,20 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<% provide(:title, 'New Booking ') %>
+<h1>Create new booking info </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@booking) do |f| %>
+    
+
+      <%= f.label :tickets %>
+      <%= f.text_field :tickets,  class: 'form-control' %>
+
+      <%= f.label :price %>
+      <%= f.text_field :price,  class: 'form-control' %>
+
+      
+
+      <%= f.submit "Create Booking", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

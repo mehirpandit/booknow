@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seat_row: 1
+  seat_no: 1
+
+two:
+  seat_row: 1
+  seat_no: 1

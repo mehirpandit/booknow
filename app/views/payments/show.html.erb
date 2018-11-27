@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>card_type:</strong>
+  <%= @payment.card_type %>
+</p>
+
+<p>
+  <strong>Card no:</strong>
+  <%= @payment.card_no %>
+</p>
+
+<p>
+  <strong>Exp date:</strong>
+  <%= @payment.exp_date %>
+</p>
+
+<p>
+  <strong>Cv no:</strong>
+  <%= @payment.cv_no %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

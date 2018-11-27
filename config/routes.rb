@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :seatings
+  resources :payments
+  get 'show_times/new'
   get 'promotions/new'
   get 'promotion/new'
   get 'bookings/new'
@@ -19,5 +22,9 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :movies
   resources :halls
+  resources :bookings
+  resources :promotions
+  resources :show_times
+
 
 end

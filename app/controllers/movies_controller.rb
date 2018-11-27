@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
-  
+
+    
 def index
   @movies = Movie.paginate(page: params[:page])
   
@@ -17,7 +18,7 @@ def show
    def create
     @movie = Movie.new(movie_params)
     if @movie.save
-       # Handle a successful save.
+       redirect_to @movie
     else
       render 'new'
     end
@@ -36,7 +37,8 @@ def edit
 private
 
     def movie_params
-      params.require(:movie).permit(:name, :category)
+      params.require(:movie).permit(:name, :category, :avatar)
     end
 
   end
+

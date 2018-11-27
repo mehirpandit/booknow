@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  card_no: 1
+  exp_date: 2018-11-27
+  cv_no: 1
+
+two:
+  type: 
+  card_no: 1
+  exp_date: 2018-11-27
+  cv_no: 1

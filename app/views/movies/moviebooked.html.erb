@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+ 
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @movie.category %>
+</p>
+ 
+<p>
+  <strong>Movie Poster:</strong>
+  <%= image_tag @movie.avatar.url %>
+</p>
+ 
+ <p style="font-size:25px;"><b>Show Times</b></p><hr>
+  <table style="width:100%">
+  <tr>
+    <th>Friday, October 5</th>
+    <th>Saturday, October 6</th>
+    <th>Sunday October 7</th>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="10"> 10:00 AM</td>
+    <td><input type="radio" name="seattime" value="10"> 10:00 AM</td>
+    <td><input type="radio" name="seattime" value="10"> 10:00 AM</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="11"> 11:00 AM</td>
+    <td><input type="radio" name="seattime" value="11"> 11:00 AM</td>
+    <td><input type="radio" name="seattime" value="11"> 11:00 AM</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="12"> 12:00 PM</td>
+    <td><input type="radio" name="seattime" value="12"> 12:00 PM</td>
+    <td><input type="radio" name="seattime" value="12"> 12:00 PM</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="1"> 1:00 PM</td>
+    <td><input type="radio" name="seattime" value="1"> 1:00 PM</td>
+    <td><input type="radio" name="seattime" value="1"> 1:00 PM</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="2"> 2:00 PM</td>
+    <td><input type="radio" name="seattime" value="2"> 2:00 PM</td>
+    <td><input type="radio" name="seattime" value="2"> 2:00 PM</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="seattime" value="3"> 3:00 PM</td>
+    <td><input type="radio" name="seattime" value="3"> 3:00 PM</td>
+    <td><input type="radio" name="seattime" value="3"> 3:00 PM</td>
+  </tr>
+</table>
+<br>
+      
+<p style="font-size:25px;"><b>Seating</b></p><hr>
+
+<%= link_to 'Click to seat', controller: "seatings", action: "new" %>
+                      
+
+<br><br>
+
+<br>
+<button type="button" align-items: center; justify-content: center;>Reserve Seat</button>
+

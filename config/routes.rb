@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get 'promotion/new'
   get 'bookings/new'
   get 'halls/new'
-  get   '/addmovie',  to:  'movies#new'
-  get   '/editmovie',  to:  'movies#edit'
+  #post "movies/:id/edit"    => "movies#movieupdated"
+  get '/bookmovie', to: 'movies#moviebooked'
+
   get 'password_resets/new'
   get 'password_resets/edit'
   root   'static_pages#home'

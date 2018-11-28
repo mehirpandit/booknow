@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 
-    <%= form_for(:movie, url: editmovie_path )  do |f| %>
+    <%= form_for(@movie)  do |f| %>
         
 
       <%= f.label :name %>
@@ -18,6 +18,30 @@
          <%= f.file_field :avatar %>
          
       </div>
+
+      <%= f.label :cast %>
+      <%= f.text_field :cast, class: 'form-control'  %>
+
+
+      <%= f.label :director %>
+      <%= f.text_field :director, class: 'form-control'  %>
+
+
+      <%= f.label :producer %>
+      <%= f.text_field :producer, class: 'form-control'  %>
+
+      <%= f.label :synopsis %>
+      <%= f.text_field :synopsis, class: 'form-control'  %>
+
+
+      <%= f.label :review %>
+      <%= f.text_field :review, class: 'form-control'  %>
+
+      
+      <%= f.label :rating %>
+      <%= f.text_field :rating, class: 'form-control'  %>
+
+
 
       <%= f.submit "Update", class: "btn btn-primary" %>
 

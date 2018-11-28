@@ -25,7 +25,18 @@ def show
   end
 
 def edit
+   @movie = Movie.find(params[:id])
     
+  end
+
+def update
+    @movie = Movie.find(params[:id])
+    if @movie.update_attributes(movie_params)
+      redirect_to @movie
+
+    else
+      render 'edit'
+    end
   end
 
  def destroy
@@ -37,8 +48,6 @@ def edit
 private
 
     def movie_params
-      params.require(:movie).permit(:name, :category, :avatar)
+      params.require(:movie).permit(:name, :category, :avatar, :cast, :director, :producer, :synopsis, :review, :rating)
     end
-
   end
-

@@ -2,8 +2,6 @@
 <h1>Add Movie </h1>
 
  
-
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@movie) do |f| %>
@@ -15,7 +13,7 @@
       <%= f.label :category %>
       <%= f.text_field :category, class: 'form-control' %>
 
-      <div class="field">
+       <div class="field">
          <%= f.label :avatar %><br>
          <%= f.file_field :avatar %>
          <% if f.object.avatar? %>
@@ -24,6 +22,32 @@
          <%= f.check_box :remove_avatar %> 
         <% end %>
       </div>
+
+
+      <%= f.label :cast %>
+      <%= f.text_field :cast, class: 'form-control'  %>
+
+
+      <%= f.label :director %>
+      <%= f.text_field :director, class: 'form-control'  %>
+
+
+      <%= f.label :producer %>
+      <%= f.text_field :producer, class: 'form-control'  %>
+
+      <%= f.label :synopsis %>
+      <%= f.text_field :synopsis, class: 'form-control'  %>
+
+
+      <%= f.label :review %>
+      <%= f.text_field :review, class: 'form-control'  %>
+
+
+      <%= f.label :rating %>
+      <%= f.text_field :rating, class: 'form-control'  %>
+
+
+     
 
 
       <%= f.submit "Add this Movie", class: "btn btn-primary" %>

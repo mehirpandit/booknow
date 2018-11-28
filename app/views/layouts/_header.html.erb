@@ -4,7 +4,15 @@
     <%= link_to "Book Now", root_path, id: "logo" %>
     <nav>
                    
-          <ul class="nav navbar-nav  ml-auto mr-auto ">
+         <%= form_tag movies_path, :method => 'get' do %>
+         <%= text_field_tag :search, params[:search] %>
+         <%= submit_tag "Search" %>
+         <% end %>
+
+         <%= link_to "Advanced Search", new_search_path %>
+
+
+          <%# <ul class="nav navbar-nav  ml-auto mr-auto ">
           <form class="form-inline" id="search"><br>
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                <button class="btn btn-warning my-2 my-sm-0" type="submit">
@@ -12,7 +20,7 @@
               </button>
            </form>
          </ul>
-         
+         <%# %>
                             
 
       <ul class="nav navbar-nav navbar-right">

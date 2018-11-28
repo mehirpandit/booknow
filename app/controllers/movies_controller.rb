@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 
     
 def index
-  @movies = Movie.paginate(page: params[:page])
+  @movies = Movie.search(params[:search])
   
 end
 

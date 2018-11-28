@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_060542) do
+ActiveRecord::Schema.define(version: 2018_11_28_014751) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "tickets"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 2018_11_27_060542) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "seatings", force: :cascade do |t|
     t.integer "seat_row"
     t.integer "seat_no"
@@ -70,6 +77,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_060542) do
     t.datetime "updated_at", null: false
     t.integer "movie_id"
     t.integer "hall_id"
+    t.date "show_date"
     t.index ["hall_id"], name: "index_show_times_on_hall_id"
     t.index ["movie_id"], name: "index_show_times_on_movie_id"
   end

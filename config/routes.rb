@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :bookings
   resources :promotions
   resources :show_times
+  resources :searches
 
 
 end

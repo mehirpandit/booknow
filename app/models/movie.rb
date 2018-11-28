@@ -7,6 +7,16 @@ class Movie < ApplicationRecord
 
    has_many :show_times
 
+  
+
    mount_uploader :avatar, AvatarUploader
-   
+   def self.search(search)
+       if search
+       	where(["name LIKE ?","%#{search}%"])
+         		
+         	else
+         		all
+         	end  	
+   	
+   end
 end

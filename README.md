@@ -3,6 +3,9 @@ Booknow is a Web application developed using Ruby on Rails that allows users to 
 
 ## Technologies Used
 Ruby on Rails
+CoffeeScript
+jQuery
+HTML
 
 
 # README

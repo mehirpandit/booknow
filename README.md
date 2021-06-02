@@ -1,3 +1,10 @@
+# Introduction 
+Booknow is a Web application developed using Ruby on Rails that allows users to easily book a movie ticket online.
+
+## Technologies Used
+Ruby on Rails
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
